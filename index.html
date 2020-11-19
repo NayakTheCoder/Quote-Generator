@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+    <style>
+        *{
+            text-align: center;
+            font-family: cursive;
+        }
+#small{
+    width: 350px;
+    height: 300px;
+    border:20px solid rgb(184, 122, 107);
+    background-color: rgb(255, 224, 195);
+ 
+}
+      
+        #main{
+            padding-left: 450px;
+            padding-top: 200px;
+            
+        }
+        button{
+            color:white ;
+            background-color: turquoise;
+            height:50px;
+            border: 4px solid rgb(4, 95, 91);
+        }
+        #button{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"> <div id="small">
+        <h2>Random Quotes</h2>
+        <br>
+        <p>“There is only one way to happiness and that is to cease worrying about things which are beyond the power of our will.</p>
+        <div id="button"><button type="button" onclick="myfunction()">Generate quote</button></div>
+    </div></div>
+</body>
+<script>
+    let para = document.querySelector("p");
+    function Myquote(){
+    let quotes = ["The greatest glory in living lies not in never falling, but in rising every time we fall.","The way to get started is to quit talking and begin doing.","Your time is limited, so don't waste it living someone else's life. ...","If life were predictable it would cease to be life, and be without flavor.","“Winning doesn't always mean being first. ..." ];
+    let random = Math.floor(Math.random()*5);
+    return quotes[random];
+    }
+
+    function myfunction(){
+        let generatedquote = Myquote();
+        para.innerHTML = generatedquote;
+    }
+</script>
+</html>
